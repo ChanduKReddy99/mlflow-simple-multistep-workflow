@@ -1,0 +1,17 @@
+name: multistep_worflow_example
+
+conda_env: conda.yaml
+
+entry_points:
+    main:
+       parameters:
+            training: {type: int, default: 0}
+       command: 'python main.py'
+
+    stage01:
+         command: 'python stage01.py'
+    stage02:
+        command: 'python stage02.py'
+    stage03:       
+        command: 'python stage03.py'
+
